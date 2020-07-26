@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
 :root {
-  --primary-color: #e50914;
+  --primary-color: rgb(33, 33, 33);
 }
 
 * {
@@ -9,7 +11,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Abel Pro", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   background: #000;
   color: #999;
@@ -47,9 +49,22 @@ img {
     no-repeat center center/cover;
 }
 
+/* Lighter background / adding a shadow look */
+.showcase::after {
+  content: "";
+  position: absolute; /* We want to position it inside our showcase */
+  top: 0; /* Makes it on the top left */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* NOT on top of everything */
+  background: rgba(0, 0, 0, 0.6); /* A transparent color / see through color */
+}
+
 /* Showcase top */
 .showcase-top {
   position: relative;
+  z-index: 2;
   height: 90px;
 }
 
@@ -66,6 +81,36 @@ img {
   top: 50%;
   right: 0%;
   transform: translate(-50%, -50%); /* Makes it in the middle of the logo */
+}
+
+/* Showcase content */
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  margin: auto; /* Move it to the middle */
+  display: flex;
+  flex-direction: column; /* Change it to column because the flex default is row */
+  justify-content: center; /* Move everything to the center */
+  align-items: center; /* Move everything to the center */
+  text-align: center; /* Move everything to the center */
+  margin-top: 9rem;
+}
+
+.showcase-content h1 {
+  font-weight: 700;
+  font-size: 5.2rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  color: #02f7ff;
+}
+
+.showcase-content p {
+  text-transform: uppercase;
+  color: #02f7ff;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  margin: 0 0 2rem;
 }
 
 /* Buttons */
