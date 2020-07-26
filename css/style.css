@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: rgb(33, 33, 33);
+  --dark-color: #141414;
 }
 
 * {
@@ -59,6 +60,7 @@ img {
   height: 100%;
   z-index: 1; /* NOT on top of everything */
   background: rgba(0, 0, 0, 0.6); /* A transparent color / see through color */
+  /* box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000; Adding a shadow all around */
 }
 
 /* Showcase top */
@@ -111,6 +113,20 @@ img {
   font-size: 1.9rem;
   line-height: 1.25;
   margin: 0 0 2rem;
+}
+
+/* Tabs */
+
+.tabs {
+  background: var(--dark-color);
+  padding-top: 1rem;
+  border-bottom: 3px solid #3d3d3d;
+}
+
+/*Grid on container to make the 3divs children display as grid */
+.tabs .container {
+  display: grid;
+  grid-template-columns: repeat(1fr);
 }
 
 /* Buttons */
