@@ -59,3 +59,22 @@ img {
   left: 50%;
   transform: translate(-50%, -50%); /* Makes the img in the middle */
 }
+
+.showcase-top a {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%); /* Makes it in the middle of the logo */
+}
+
+/* Buttons */
+.btn {
+  display: inline-block; /* It's inline but we can add height and width */
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
