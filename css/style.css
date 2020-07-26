@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: rgb(33, 33, 33);
+  --secondary-color: #02f7ff;
   --dark-color: #141414;
 }
 
@@ -103,12 +104,12 @@ img {
   font-size: 5.2rem;
   line-height: 1.1;
   margin: 0 0 2rem;
-  color: #02f7ff;
+  color: var(--secondary-color);
 }
 
 .showcase-content p {
   text-transform: uppercase;
-  color: #02f7ff;
+  color: var(--secondary-color);
   font-weight: 700;
   font-size: 1.9rem;
   line-height: 1.25;
@@ -123,10 +124,43 @@ img {
   border-bottom: 3px solid #3d3d3d;
 }
 
-/*Grid on container to make the 3divs children display as grid */
+/* Grid on container to make the 3divs children display as grid */
 .tabs .container {
   display: grid;
-  grid-template-columns: repeat(1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  align-items: center; /* If you use flex/grid you need these 3 to center things */
+  justify-content: center; /* If you use flex/grid you need these 3 to center things */
+  text-align: center; /* If you use flex/grid you need these 3 to center things */
+}
+
+.tabs p {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+}
+
+/* Target each div */
+.tabs .container > div {
+  padding: 1.5rem 0;
+}
+
+/* Hover effect on div */
+.tabs .container > div:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* div bottom border */
+.tab-border {
+  border-bottom: var(--secondary-color) 4px solid;
+}
+
+/* Container */
+.container {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden; /* Everything to stay within the container */
+  padding: 0 2rem;
 }
 
 /* Buttons */
